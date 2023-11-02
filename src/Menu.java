@@ -7,7 +7,6 @@ import java.io.InputStreamReader;
 import java.util.Scanner;
 
 public abstract class Menu {
-    protected int EXIT_OPTION = 0;
     private String header;
     private String[] menuItems;
 
@@ -29,7 +28,7 @@ public abstract class Menu {
             int option = getOption();
             pause(option);
             doAction(option);
-            if (option == 0) {
+            if (option == 0) {//Option 0 = exit
                 done = true;
                 System.out.println("Goodbye!");
             }

@@ -25,8 +25,6 @@ public class Main {
         MainMenu mainMenu = new MainMenu(startMenuHeader, menuOptions);
         mainMenu.run();
 
-
-
-
     }
+
 }
