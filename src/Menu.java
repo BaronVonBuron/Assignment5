@@ -1,6 +1,3 @@
-import javax.swing.*;
-import java.awt.*;
-import java.awt.event.KeyEvent;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -36,7 +33,7 @@ public abstract class Menu {
     }
 
 
-    private int getOption() {
+    public int getOption() {
         Scanner scanner = new Scanner(System.in);
         boolean gettingOption = true;
         while(gettingOption){
@@ -61,14 +58,16 @@ public abstract class Menu {
 
     private void showMenu() {
         for (String option : menuItems) {
-            System.out.println(option);
+            if (option != null) {
+                System.out.println(option);
+            }
         }
     }
 
 
 
     protected void pause(int option) {
-        System.out.print("....Option: "+option+" Selected. Press enter to continue.");
+        System.out.print("Option: "+option+" Selected. Press enter to continue.");
         boolean pause = true;
         try {
             while (pause){
